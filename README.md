@@ -6,7 +6,7 @@ This repository groups the final projects made during the [Meta Front-End Develo
 
 ## Projects
 
-### 1. [Lucky Shrub](https://github.com/WanderleeDev/HTML-and-CSS-in-depth--Project-of-Coursera)
+### 1. [Lucky Shrub](https://github.com/WanderleeDev/Coursera-projects/tree/main/HTML-and-CSS-in-depth--Project-of-Coursera-main)
 
 A web page that presents a gardening company. The project was developed using HTML, CSS.
 
