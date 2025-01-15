@@ -13,15 +13,24 @@ import {
 import { Flex, Icon } from "@chakra-ui/react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import styles from "./style.module.css";
+import { useState } from "react";
 
 interface Props {
   routes: string[];
 }
 
 export default function HeaderMobile({ routes }: Props) {
+  const [open, setOpen] = useState(false);
+  const toggleDrawer = () => setOpen((prev) => !prev);
+
   return (
     <Flex>
-      <DrawerRoot size={"full"} placement="start">
+      <DrawerRoot
+        size={"full"}
+        placement="start"
+        open={open}
+        onOpenChange={toggleDrawer}
+      >
         <DrawerBackdrop />
         <DrawerTrigger asChild aria-label="Open menu">
           <Button
@@ -52,6 +61,7 @@ export default function HeaderMobile({ routes }: Props) {
             {routes.map((url) => (
               <NavLink
                 className={({ isActive }) => (isActive ? styles.active : "")}
+                onClick={toggleDrawer}
                 key={url}
                 to={`/${url}`}
               >

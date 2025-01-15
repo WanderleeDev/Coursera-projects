@@ -43,7 +43,7 @@ export default function HeaderDesktop({ routes }: Props) {
         </Flex>
         <Flex gap={4}>
           {socialMedia.map(({ name, url, icon }) => (
-            <NavLink key={name} to={url} target="_blank">
+            <NavLink aria-label={name} key={name} to={url} target="_blank">
               <Icon fontSize="25px" _hover={{ color: "#DFB512" }}>
                 {icon}
               </Icon>

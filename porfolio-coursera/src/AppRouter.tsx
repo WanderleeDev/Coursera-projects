@@ -7,9 +7,9 @@ import RootLayout from "./layouts/RootLayout";
 import Loader from "./components/custom/Loader";
 
 const queryClient = new QueryClient();
-const Home = React.lazy(() => import("@/pages/Home"));
-const Projects = React.lazy(() => import("@/pages/Projects"));
-const Contact = React.lazy(() => import("@/pages/Contact"));
+const LazyHome = React.lazy(() => import("@/pages/Home"));
+const LazyProjects = React.lazy(() => import("@/pages/Projects"));
+const LazyContact = React.lazy(() => import("@/pages/Contact"));
 
 export const AppRouter = () => {
   return (
@@ -19,9 +19,30 @@ export const AppRouter = () => {
           <Suspense fallback={<Loader />}>
             <Routes>
               <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route
+                path="/home"
+                element={
+                  <Suspense fallback={<Loader />}>
+                    <LazyHome />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <Suspense fallback={<Loader />}>
+                    <LazyProjects />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <Suspense fallback={<Loader />}>
+                    <LazyContact />
+                  </Suspense>
+                }
+              />
             </Routes>
           </Suspense>
         </RootLayout>

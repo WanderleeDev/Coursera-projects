@@ -2,7 +2,7 @@
 
 ![Portfolio cover](https://www.dropbox.com/scl/fi/qprktamtafmw8peoo1tvq/Screenshot-from-2025-01-15-08-37-54.png?rlkey=jrhx0149j6obquy7hopko1t3t&st=hlup9xqv&raw=1)
 
-[![GitHub](https://img.shields.io/badge/Demo-100000?style=for-the-badge&logo=rocket&logoColor=white)](https://porfolio-coursera.vercel.app)
+[![Demo](https://img.shields.io/badge/Demo-eb9d15?style=for-the-badge&logo=rocket&logoColor=white&labelColor=#eb9d15)](https://porfolio-coursera.vercel.app)
 
 ## 🚀 Description
 
