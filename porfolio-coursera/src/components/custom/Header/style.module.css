@@ -1,0 +1,30 @@
+.reveal {
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: #0016ff90;
+  backdrop-filter: blur(0.5rem);
+  padding: 1rem;
+  animation: re-reveal linear forwards;
+  animation-timeline: view(block);
+  animation-range: exit-crossing 300% exit-crossing 450%;
+  transition: position 0.5s ease-in-out;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #dfb512;
+}
+
+@keyframes re-reveal {
+  from {
+    position: absolute;
+    transform: translateY(-100%);
+  }
+  to {
+    position: fixed;
+    transform: translateY(0);
+  }
+}

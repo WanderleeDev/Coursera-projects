@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background-color, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.marqueeWrapper {
+  display: flex;
+  min-width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.marqueeWrapperSlow {
+  animation: marquee 40s linear infinite;
+}
+
+.marqueeWrapperNormal {
+  animation: marquee 20s linear infinite;
+}
+
+.marqueeWrapperFast {
+  animation: marquee 10s linear infinite;
+}
+
+.container:hover .marqueeWrapperSlow,
+.container:hover .marqueeWrapperNormal,
+.container:hover .marqueeWrapperFast {
+  animation-play-state: paused;
+}
+
+.image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,39 @@
+.animate-container {
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+  place-items: center;
+  min-height: 100dvh;
+  margin-inline: auto;
+  text-align: center;
+  animation: scale-inline linear forwards;
+  animation-timeline: view(block);
+  animation-range: cover 20% contain 50%;
+}
+
+.animate-text span {
+  color: transparent;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.5rem, 4vw);
+  background-image: linear-gradient(180deg, white 50%, #04415c);
+  background-clip: text;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  animation: reveal-text ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: cover 10% contain 50%;
+  text-wrap: stable;
+}
+
+@keyframes reveal-text {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes scale-inline {
+  to {
+    perspective: 600px;
+    transform: scale(0.8) rotateX(0deg);
+  }
+}

@@ -1,0 +1,21 @@
+.text-bg-clip {
+  color: transparent;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 2rem, 4vw);
+  background: linear-gradient(180deg, white 50%, #04415c) !important;
+  background-clip: text !important;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  text-wrap: stable;
+}
+
+.sr-only {
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  user-select: none;
+  pointer-events: none;
+}
