@@ -18,29 +18,35 @@ Portfolio website built with React, TypeScript, and Chakra UI, featuring a respo
 - EmailJS
 - React Router
 - TanStack Query
+- Jest
+- Testing library
 
 ## 📁 Project Structure
 
 ```
-src/
-├── components/
-│   ├── custom/
-│   │   ├── Form/               # Form components
-│   │   ├── Header/            # Header components with styles
-│   │   ├── InfiniteMarquee/   # Marquee animation
-│   │   ├── TextAnimate/       # Text animation components
-│   │   └── [Other Components] # CardProject, Footer, etc.
-│   ├── icons/                 # SVG icon components
-│   ├── types/                 # Type definitions
-│   └── ui/                    # UI components (Chakra UI)
-├── hooks/                     # Custom hooks
-├── interfaces/               # TypeScript interfaces
-├── layouts/                  # Layout components
-├── lib/                      # Third-party integrations
-├── models/                   # Data models
-├── pages/                    # Main pages
-├── schemas/                  # Zod validation schemas
-└── utils/                    # Utility functions
+📁 src
+    📁 __test__
+        📁 e2e
+        📁 integration
+        📁 unit
+    📁 components
+        📁 custom
+        📁 icons
+        📁 types
+        📁 ui
+    📁 hooks
+    📁 interfaces
+    📁 layouts
+    📁 lib
+    📁 models
+    📁 pages
+    📁 schemas
+    📁 utils
+    ─ App.tsx
+    ─ AppRouter.tsx
+    ─ index.css
+    ─ main.tsx
+    ─ vite-env.d.ts
 ```
 
 ## 🛠️ Setup and Installation

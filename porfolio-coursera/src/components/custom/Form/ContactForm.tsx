@@ -28,6 +28,11 @@ export default function ContactForm() {
       message: "",
     },
   });
+  const selectOptions = [
+    "Project Collaboration",
+    "Freelance Work",
+    "Technical Consultation",
+  ];
   const tooltipMessage = !isValid
     ? "Fill the form"
     : isSubmitting
@@ -63,7 +68,7 @@ export default function ContactForm() {
           name="email"
         />
         <SelectForm
-          options={["React", "Vue", "Angular", "Svelte"]}
+          options={selectOptions}
           label="Type of enquiry"
           control={control}
           errors={errors}
